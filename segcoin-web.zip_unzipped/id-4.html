@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wallet y boletos SEGCOIN.">
+  <title>SEGCOIN | Mi Wallet</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="id-1.html"><span class="coin-logo">$</span><span>SEGCOIN</span></a>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+      <nav class="nav">
+        <a href="id-1.html">Inicio</a><a href="id-3.html">Sorteo</a><a href="id-2.html">Comprar</a><a class="active" href="id-4.html">Wallet</a><a href="id-5.html">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="page-heading">
+        <span class="eyebrow">SEGCOIN • CUENTA</span>
+        <h1>MI <span>WALLET</span></h1>
+        <p>Consulta tu saldo, historial y boletos registrados.</p>
+      </div>
+
+      <section class="wallet-grid">
+        <article class="panel balance-card">
+          <h2>MI WALLET</h2>
+          <span>Saldo disponible</span>
+          <strong id="walletBalance">125.600 SEG</strong>
+          <small>≈ R$ 502,40 BRL</small>
+          <div class="wallet-actions"><button class="btn btn-outline" type="button">ENVIAR</button><button class="btn btn-outline" type="button">RECIBIR</button></div>
+          <div class="divider"></div>
+          <h3>Historial reciente</h3>
+          <ul class="history"><li><span>Compra de boletos</span><b>-20.000 SEG</b></li><li><span>Compra de SEG</span><b>+50.000 SEG</b></li><li><span>Recompensa referidos</span><b>+5.000 SEG</b></li></ul>
+        </article>
+
+        <article class="panel tickets-card">
+          <h2>MIS BOLETOS</h2>
+          <p>Tienes <b id="ticketCount">10</b> boletos para el próximo sorteo.</p>
+          <div id="ticketList" class="ticket-list"></div>
+          <div class="secure-note">♢ Tus boletos están seguros y registrados en la blockchain.<br>Transparencia y confianza garantizadas.</div>
+        </article>
+      </section>
+    </main>
+    <footer class="footer compact"><div class="footer-brand"><span class="coin-logo">S</span><strong>SEGCOIN</strong></div><span>Wallet demo • Datos almacenados localmente</span></footer>
+  </div>
+</body>
+</html>

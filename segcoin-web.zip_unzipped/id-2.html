@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compra y verifica tus boletos SEGCOIN.">
+  <title>SEGCOIN | Comprar boletos</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="id-1.html"><span class="coin-logo">$</span><span>SEGCOIN</span></a>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+      <nav class="nav">
+        <a href="id-1.html">Inicio</a><a href="id-3.html">Sorteo</a><a class="active" href="id-2.html">Comprar</a><a href="id-4.html">Wallet</a><a href="id-5.html">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="page-heading">
+        <span class="eyebrow">SEGCOIN • BOLETO DIGITAL</span>
+        <h1>COMPRAR BOLETO <span>Y VERIFICACIÓN</span></h1>
+        <p>Selecciona la cantidad de boletos y confirma tu compra.</p>
+      </div>
+
+      <section class="purchase-grid">
+        <form id="purchaseForm" class="panel form-card">
+          <h2>COMPRAR BOLETO</h2>
+          <label for="ticketQty">Cantidad de boletos</label>
+          <div class="quantity">
+            <button type="button" data-qty="-1">−</button>
+            <input id="ticketQty" name="ticketQty" type="number" value="5" min="1" max="100" readonly>
+            <button type="button" data-qty="1">+</button>
+          </div>
+          <div class="price-row"><span>Precio por boleto</span><strong>4.000 SEG</strong></div>
+          <div class="divider"></div>
+          <div class="total-row"><span>Total a pagar</span><strong id="ticketTotal">20.000 SEG</strong></div>
+          <small>(5 boletos × 4.000 SEG)</small>
+          <button class="btn btn-primary wide" type="submit">COMPRAR AHORA</button>
+          <p class="form-note">Demo de interfaz. No procesa fondos reales.</p>
+        </form>
+
+        <section id="purchaseResult" class="panel verification-card">
+          <h2>VERIFICACIÓN DE COMPRA</h2>
+          <div class="success-mark">✓</div>
+          <h3 id="purchaseStatus">¡Compra realizada con éxito!</h3>
+          <div class="order-data">
+            <p><span>Número de orden:</span><b id="orderNumber">#SEGCOIN-DEMO</b></p>
+            <p><span>Cantidad de boletos:</span><b id="orderQty">5</b></p>
+            <p><span>Total pagado:</span><b id="orderTotal">20.000 SEG</b></p>
+            <p><span>Fecha:</span><b id="orderDate">--</b></p>
+            <p><span>Estado:</span><b class="gold-text">Confirmado</b></p>
+          </div>
+          <button class="btn btn-outline" type="button" id="viewTickets">VER MIS BOLETOS</button>
+        </section>
+
+        <aside class="panel info-card">
+          <div class="coin-medium"><span>$</span></div>
+          <h3>Cada boleto te da<br>una oportunidad de ganar.</h3>
+          <p>Sorteo transparente y auditable según las reglas publicadas de la campaña.</p>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer compact"><div class="footer-brand"><span class="coin-logo">S</span><strong>SEGCOIN</strong></div><span>Compra • Participa • Gana</span></footer>
+  </div>
+</body>
+</html>
